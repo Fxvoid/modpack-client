@@ -1,0 +1,66 @@
+{
+  "item": "experience_battery",
+  "chance": 0.001,
+  "loot_tables": [
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/simple_dungeon"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/abandoned_mineshaft"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/nether_bridge"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/stronghold_library"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/stronghold_crossing"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/stronghold_corridor"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/desert_pyramid"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/jungle_temple"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/igloo_chest"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/woodland_mansion"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/underwater_ruin_big"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/buried_treasure"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/shipwreck_treasure"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/pillager_outpost"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/ruined_portal"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "miners_soul",
+  "chance": 0.0025,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/hard"
+    }
+  ]
+}

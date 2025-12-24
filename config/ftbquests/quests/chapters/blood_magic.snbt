@@ -1,0 +1,219 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "blood_magic"
+	group: ""
+	icon: "bloodmagic:altar"
+	id: "5E33319013093280"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["The Sentient Snare is your entry point. Throw it at a hostile mob until white particles appear, then kill the mob to get Demonic Will."]
+			id: "4A09939102830111"
+			rewards: [{
+				count: 4
+				id: "1093849182390001"
+				item: "bloodmagic:soulsnare"
+				type: "item"
+			}]
+			subtitle: "Gathering Will"
+			tasks: [{
+				id: "6B19920102930112"
+				item: "bloodmagic:soulsnare"
+				type: "item"
+			}]
+			title: "The Beginning"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4A09939102830111"]
+			description: ["Raw Demonic Will is essential for fueling the Hellfire Forge and crafting your first gems."]
+			id: "1F29939102830222"
+			rewards: [{
+				count: 4
+				id: "2093849182390002"
+				item: {
+					Count: 1
+					id: "bloodmagic:basemonstersoul"
+					tag: {
+						souls: 5.0d
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "Mob Drops"
+			tasks: [{
+				id: "7C29930102930223"
+				item: "bloodmagic:basemonstersoul"
+				type: "item"
+			}]
+			title: "Demonic Will"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1F29939102830222"]
+			description: ["The Blood Altar is the heart of your progression. You will need to sacrifice your own health (or mobs) to fill it."]
+			id: "2A39939102830333"
+			rewards: [{
+				id: "3093849182390003"
+				item: "bloodmagic:sacrificial_dagger"
+				type: "item"
+			}]
+			subtitle: "Tier 1 Altar"
+			tasks: [{
+				id: "0B39930102930334"
+				item: "bloodmagic:altar"
+				type: "item"
+			}]
+			title: "The Altar"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1F29939102830222"]
+			description: ["The Hellfire Forge allows you to use Demonic Will to craft magical components like the Petty Tartaric Gem."]
+			id: "3B49939102830444"
+			rewards: [{
+				count: 4
+				id: "4093849182390004"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			subtitle: "Demon Forging"
+			tasks: [{
+				id: "1C49930102930445"
+				item: "bloodmagic:soulforge"
+				type: "item"
+			}]
+			title: "Hellfire Forge"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3B49939102830444"]
+			description: ["The Petty Tartaric Gem stores Demonic Will. You need this in your inventory to perform crafts in the Hellfire Forge."]
+			id: "5C69939102830666"
+			tasks: [{
+				id: "3E69930102930667"
+				item: "bloodmagic:soulgempetty"
+				type: "item"
+			}]
+			title: "Will Storage"
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2A39939102830333"]
+			description: ["Right-click near the Altar to sacrifice some of your health to fill the altar with blood (Life Essence)."]
+			id: "4A59939102830555"
+			tasks: [{
+				id: "2D59930102930556"
+				item: {
+					Count: 1b
+					id: "bloodmagic:sacrificial_dagger"
+					tag: {
+						sacrifice: 0b
+					}
+				}
+				type: "item"
+			}]
+			title: "Bloodletting"
+			x: -3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2A39939102830333"]
+			description: ["The first tier of Blood Orb. Place a Diamond in a full T1 Altar to craft this. You need to bind it to yourself by right-clicking it."]
+			id: "6D79939102830777"
+			rewards: [{
+				count: 2
+				id: "5093849182390005"
+				item: "bloodmagic:blankslate"
+				type: "item"
+			}]
+			subtitle: "Tier 1 Orb"
+			tasks: [{
+				id: "4F79930102930778"
+				item: "bloodmagic:weakbloodorb"
+				type: "item"
+			}]
+			title: "Weak Blood Orb"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6D79939102830777"]
+			description: ["To upgrade your altar to Tier 2, you need 8 Blank Runes. Place them in a ring one block below the Altar."]
+			id: "7E89939102830888"
+			rewards: [{
+				count: 4
+				id: "6093849182390006"
+				item: "bloodmagic:blankrune"
+				type: "item"
+			}]
+			subtitle: "Tier 2 Structure"
+			tasks: [{
+				count: 8L
+				id: "24D431B81EFCB410"
+				item: "bloodmagic:blankrune"
+				type: "item"
+			}]
+			title: "Runes of Blood"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E89939102830888"]
+			description: ["With a Tier 2 Altar, you can craft the Apprentice Orb using a Redstone Block."]
+			id: "4F1E8987781F9F11"
+			rewards: [{
+				id: "7093849182390007"
+				item: "bloodmagic:daggerofsacrifice"
+				type: "item"
+			}]
+			subtitle: "Tier 2 Orb"
+			tasks: [{
+				id: "1051B2B561D64A1B"
+				item: "bloodmagic:apprenticebloodorb"
+				type: "item"
+			}]
+			title: "Apprentice Blood Orb"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			description: ["Used to sacrifice mobs for Life Essence. Instakills mobs in the designated altar range. Much more efficient than self-sacrifice."]
+			id: "335F117B36875CC1"
+			tasks: [{
+				id: "381ED9BD6A0DF049"
+				item: "bloodmagic:daggerofsacrifice"
+				type: "item"
+			}]
+			title: "Mob Sacrifice"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			description: ["Requires a Tier 3 Altar structure (Build up pillars on the corners and add a new ring of runes)."]
+			id: "0B19939102831111"
+			rewards: [{
+				id: "604F60989E51A6BD"
+				item: "bloodmagic:ritualdiviner"
+				type: "item"
+			}]
+			subtitle: "Tier 3 Orb"
+			tasks: [{
+				id: "7F9DD1945AA3D445"
+				item: "bloodmagic:magicianbloodorb"
+				type: "item"
+			}]
+			title: "Magician Blood Orb"
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+	title: "Blood Magic"
+}

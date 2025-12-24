@@ -1,0 +1,415 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "hex_casting"
+	group: ""
+	icon: "hexcasting:spellbook"
+	id: "6E7F8A9B0C1D2E3F"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Hex Casting is a magic mod powered by &bMedia&r, which is obtained from Amethyst. To begin, you must mine Amethyst Clusters."
+				""
+				"&5Amethyst Dust:&r Dropped occasionally from clusters."
+				"&5Charged Amethyst:&r A rare drop, or created by compacting dust."
+				""
+				"&oNote: The Fortune enchantment increases yield. Amethyst Golems (from Ars Nouveau) can also produce these resources.&r"
+			]
+			id: "1001000000000001"
+			rewards: [
+				{
+					id: "3001000000000001"
+					item: "minecraft:amethyst_cluster"
+					type: "item"
+				}
+				{
+					id: "3001000000000002"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "2001000000000001"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "2001000000000002"
+					item: "hexcasting:amethyst_dust"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2001000000000003"
+					item: "hexcasting:charged_amethyst"
+					type: "item"
+				}
+			]
+			title: "The Source of Magic"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000001"]
+			description: [
+				"This book is your bible. It contains all the patterns (spells) you will need."
+				""
+				"&cImportant:&r Hex Casting requires you to draw patterns on a grid."
+				"Patterns must be drawn in specific orders (stroke direction matters!)."
+				"Refer to the online manual or this book frequently."
+			]
+			id: "1001000000000002"
+			rewards: [{
+				id: "3001000000000003"
+				item: "minecraft:writable_book"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2001000000000004"
+				item: "hexcasting:notebook"
+				type: "item"
+			}]
+			title: "Knowledge is Power"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000002"]
+			description: [
+				"To cast hexes, you need a staff."
+				""
+				"&6Usage:&r Right-click in the air to open the Hex Grid."
+				"&6Drawing:&r Left-click points to draw lines. You can connect to adjacent points, but lines cannot cross."
+				"&6Mistakes:&r Backtrack to erase a line segment. Shift+Right-click to wipe the grid entirely."
+				"&6Media:&r Spells consume Media from your inventory. The mod uses &lExact Change&r logic; it will prioritize dust, then charged amethyst."
+			]
+			id: "1001000000000003"
+			rewards: [{
+				count: 5
+				id: "3001000000000004"
+				item: "hexcasting:charged_amethyst"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2001000000000005"
+				item: {
+					Count: 1b
+					id: "hexcasting:staff_oak"
+					tag: { }
+				}
+				title: "Any Hex Staff"
+				type: "item"
+			}]
+			title: "The Casting Tool"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000003"]
+			description: [
+				"Your first spell will be changing the color of your magic."
+				""
+				"1. Craft a Pigment (4 Amethyst Dust + A Dye/Item)."
+				"2. Hold the Pigment in your &boffhand&r and your Staff in your &bmainhand&r."
+				"3. Open the grid and draw the &eInternalize Pigment&r pattern."
+				""
+				"&oPattern: A figure-eight starting counter-clockwise, followed by a rhombus.&r"
+				"&oCost: Must hold at least 1 Amethyst Dust.&r"
+			]
+			id: "1001000000000004"
+			rewards: [{
+				count: 16
+				id: "3001000000000005"
+				item: "hexcasting:amethyst_dust"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2001000000000006"
+				item: "hexcasting:dye_colorizer_white"
+				title: "Any Pigment"
+				type: "item"
+			}]
+			title: "Color Your World"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1001000000000003"]
+			description: [
+				"The Scrying Lens is essential for complex hexes. When held in the offhand:"
+				""
+				"* It visualizes the Hex Grid with tighter spacing."
+				"* It displays the current &eStack&r (the data your spell is manipulating) on the left of your screen."
+				"* It allows you to see exactly what 'Entity' or 'Vector' you currently have selected."
+			]
+			id: "1001000000000005"
+			rewards: [{
+				count: 32
+				id: "3001000000000006"
+				item: "minecraft:glass"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2001000000000007"
+				item: "hexcasting:lens"
+				type: "item"
+			}]
+			title: "Debugging Mode"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1001000000000005"]
+			description: [
+				"Hexes often require specific numbers (coordinates, strength, counters). The Abacus allows you to put precise numbers onto the stack."
+				""
+				"&bMain Hand:&r Crouch-scroll changes number by 1."
+				"&bOff Hand:&r Crouch-scroll changes number by 0.1 (tenths)."
+				"&bModifiers:&r Holding Ctrl/Command changes numbers by 10 (or 0.01 in offhand)."
+				"&bReset:&r Shift+Right-click resets to 0."
+			]
+			id: "1001000000000006"
+			rewards: [{
+				id: "3001000000000007"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "2001000000000008"
+				item: "hexcasting:abacus"
+				type: "item"
+			}]
+			title: "Magical Mathematics"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1001000000000003"]
+			description: [
+				"To interact with the world (break blocks, place lights), you must tell the spell &lwhere&r to act. This is usually done via a specific sequence known as the &bRaycast Mantra&r:"
+				""
+				"1. &5Mind's Reflection:&r Identifies you (the Caster)."
+				"2. &5Compass' Purification:&r Gets your location."
+				"3. &5Mind's Reflection:&r (You again)."
+				"4. &5Alidade's Purification:&r Gets your look vector (where you are facing)."
+				"5. &5Archer's Distillation:&r Combines location and vector to find the block you are looking at."
+				""
+				"Once this sequence is on the stack, you can draw the &cBreak Block&r pattern to mine it remotely."
+			]
+			id: "1001000000000007"
+			rewards: [{
+				id: "3001000000000008"
+				item: {
+					Count: 1
+					id: "minecraft:diamond_pickaxe"
+					tag: {
+						Damage: 0
+						Enchantments: [{
+							id: "minecraft:unbreaking"
+							lvl: 1s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2001000000000009"
+				title: "I have broken a block with magic"
+				type: "checkmark"
+			}]
+			title: "The Raycast Mantra"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000007"]
+			description: [
+				"You can exit the Hex Grid mid-spell to interact with the world."
+				""
+				"1. Place a temporary block."
+				"2. Draw the Raycast Mantra to select that block."
+				"3. &cExit the grid&r (keeping the selection on your stack)."
+				"4. Break the block and place a &bSapling&r in the same spot."
+				"5. Re-open the grid and cast &5Edify Sapling&r."
+				""
+				"This turns a vanilla sapling into an Edified Tree with purple logs and random leaf colors."
+			]
+			id: "1001000000000008"
+			rewards: [{
+				count: 4
+				id: "3001000000000009"
+				item: "hexcasting:edified_planks"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "2001000000000010"
+				item: "hexcasting:edified_log"
+				type: "item"
+			}]
+			title: "Magical Flora"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000008"]
+			description: [
+				"Drawing complex patterns every time is tedious. Use Foci and Spellbooks to store them."
+				""
+				"&bFocus:&r Stores 1 hex."
+				"&bSpellbook:&r Stores 64 hexes."
+				""
+				"&6Writing:&r To save a spell without casting it, wrap the pattern in &5Introspection&r (open parenthesis) and &5Retrospection&r (close parenthesis). Then use &5Scribe's Gambit&r to write the wrapped pattern to the item in your offhand."
+			]
+			id: "1001000000000009"
+			rewards: [{
+				id: "3001000000000010"
+				item: "minecraft:honeycomb"
+				title: "Sealing Material"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "2001000000000011"
+					item: "hexcasting:focus"
+					type: "item"
+				}
+				{
+					id: "2001000000000012"
+					item: "hexcasting:spellbook"
+					type: "item"
+				}
+			]
+			title: "Storing Patterns"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1001000000000009"]
+			description: [
+				"Casting items hold their own Media and can execute spells stored within them."
+				""
+				"&bTrinket:&r Rechargeable, holds a decent amount of Media."
+				"&bArtifact:&r Rechargeable, holds a massive amount of Media."
+				"&bCypher:&r Single-use, breaks when empty (Trash)."
+				""
+				"To make a Trinket:"
+				"1. Drop a pile of Media (Amethyst) on the ground."
+				"2. Select the item entity using &5Scout's Distillation&r."
+				"3. Write your spell (wrapped in Intro/Retrospection) to the stack."
+				"4. Cast &5Craft Trinket&r."
+				""
+				"&oTip: Use F3+B to see entity hitboxes to help with selecting the dropped item.&r"
+			]
+			id: "1001000000000010"
+			rewards: [{
+				id: "3001000000000011"
+				item: "hexcasting:sub_sandwich"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2001000000000013"
+				item: "hexcasting:trinket"
+				type: "item"
+			}]
+			title: "Magical Batteries"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1001000000000010"]
+			description: [
+				"To access \"Great Spells,\" you must first realize the potential of your own life force."
+				""
+				"1. Find an Ancient Scroll for a Great Spell (e.g., Create Lava) in a dungeon, or look up the pattern."
+				"2. &cAttempt&r to cast it without being enlightened."
+				"3. The spell will fail, but you will earn the advancement &6\"Opened Eyes\"&r."
+			]
+			id: "1001000000000011"
+			rewards: [{
+				id: "3001000000000012"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "hexcasting:y_u_no_cast_angy"
+				criterion: ""
+				id: "2001000000000014"
+				type: "advancement"
+			}]
+			title: "A Dangerous Failure"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000011"]
+			description: [
+				"To fully unlock your mind, you must cast a spell that burns your own health (HP) instead of Amethyst."
+				""
+				"1. Empty your inventory of all Amethyst/Media."
+				"2. Hold an Abacus set to a high number (approx &b7.5&r to &b12&r depending on distance calculations)."
+				"3. Cast the &5Blink&r spell."
+				"4. You must take roughly &c9.5 Hearts&r of damage from the cast cost."
+				"5. If successful, you will achieve Enlightenment."
+			]
+			id: "1001000000000012"
+			rewards: [{
+				id: "3001000000000013"
+				item: "hexcasting:uuid_colorizer"
+				title: "Special Pigment"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "hexcasting:enlightenment"
+				criterion: ""
+				id: "2001000000000015"
+				title: "Enlightenment"
+				type: "advancement"
+			}]
+			title: "The Sacrifice"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000012"]
+			description: [
+				"Once Enlightened, you can perform the &5Flay Mind&r spell."
+				""
+				"1. Locate a Master-level Villager (e.g., Librarian)."
+				"2. Place an &bAkashic Ligature&r block nearby."
+				"3. Select the Villager (Entity)."
+				"4. Select the Ligature (Block Location)."
+				"5. Cast &5Flay Mind&r."
+				""
+				"The Villager will lose its profession, and the Ligature will turn into an &dAkashic Library&r, storing the villager's knowledge and \"Iotas\"."
+			]
+			id: "1001000000000013"
+			rewards: [{
+				id: "3001000000000014"
+				item: "hexcasting:scroll_large"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "2001000000000016"
+					item: "hexcasting:akashic_record"
+					type: "item"
+				}
+				{
+					id: "2001000000000017"
+					title: "I have created an Akashic Library"
+					type: "checkmark"
+				}
+			]
+			title: "Flaying Minds"
+			x: 10.5d
+			y: 0.0d
+		}
+	]
+	title: "Hex Casting"
+}

@@ -1,0 +1,6 @@
+{
+  "config": {
+    "blastDamagePercentageReduction": 75.0,
+    "isEnable": true
+  }
+}

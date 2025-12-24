@@ -1,0 +1,14 @@
+{
+  "item": "ice_cube",
+  "chance": 0.005,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/medium"
+    },
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/water"
+    }
+  ]
+}

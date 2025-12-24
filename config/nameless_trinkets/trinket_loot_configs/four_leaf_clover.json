@@ -1,0 +1,10 @@
+{
+  "item": "four_leaf_clover",
+  "chance": 0.0001,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/hard"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "item": "lucky_rock",
+  "chance": 0.0005,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/easy"
+    },
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/medium"
+    },
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/village"
+    }
+  ]
+}

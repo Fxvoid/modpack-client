@@ -1,0 +1,679 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_rat_race"
+	group: ""
+	icon: "rats:cheese"
+	id: "5E1805537543789A"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Rats spawn naturally in the dark, but they are most commonly found in Villages on top of Garbage Piles."
+				""
+				"If you can't find one, you can craft a Trash Can and fill it with items to generate your own Garbage Pile."
+			]
+			id: "1A2B3C4D5E6F7001"
+			rewards: [
+				{
+					count: 16
+					id: "2A3B4C5D6E7F8001"
+					item: "minecraft:rotten_flesh"
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9001"
+					item: "minecraft:bone"
+					type: "item"
+				}
+			]
+			subtitle: "One Man's Trash..."
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0001"
+					observe_type: 0
+					timer: 0L
+					to_observe: ""
+					type: "observation"
+				}
+				{
+					id: "5A6B7C8D9E0F1001"
+					item: "rats:trash_can"
+					type: "item"
+				}
+			]
+			title: "Vermin  Victuals"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7001"]
+			description: [
+				"Rats love cheese. To make it, pour a bucket of Milk into a Cauldron."
+				""
+				"Wait a few moments for it to curdle into a Block of Cheese."
+			]
+			id: "1A2B3C4D5E6F7002"
+			rewards: [
+				{
+					count: 4
+					id: "2A3B4C5D6E7F8002"
+					item: "rats:cheese"
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9002"
+					item: "rats:raw_rat"
+					type: "item"
+				}
+			]
+			subtitle: "The Curdled Arts"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0002"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					id: "5A6B7C8D9E0F1002"
+					item: "minecraft:milk_bucket"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6A7B8C9D0E1F2002"
+					item: "rats:cheese"
+					type: "item"
+				}
+			]
+			title: "Cheese Production"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7002"]
+			description: [
+				"Wild rats will run from you. Drop Cheese on the ground near them."
+				""
+				"It may take 10-15 feedings to fully tame one. Once tamed, right-click them to access their inventory and equipment slots."
+			]
+			id: "1A2B3C4D5E6F7003"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8003"
+					item: "rats:rat_sack"
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9003"
+					item: "minecraft:name_tag"
+					type: "item"
+				}
+			]
+			subtitle: "Best Friends Forever"
+			tasks: [{
+				icon: "rats:rat_sack"
+				id: "4A5B6C7D8E9F0003"
+				observe_type: 0
+				timer: 0L
+				to_observe: "rats:rat"
+				type: "observation"
+			}]
+			title: "Domestication"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7003"]
+			description: [
+				"To automate tasks, you need to tell the rat where to go."
+				""
+				"1. Right-click a Rat to bind the staff to it."
+				"2. Right-click a container (Chest/Barrel) to set it as the 'Home/Deposit' point."
+				"3. Set the Rat's command to 'Harvest,' 'Gather,' or 'Hunt.'"
+			]
+			id: "1A2B3C4D5E6F7004"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8004"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "3A4B5C6D7E8F9004"
+					item: "rats:rat_upgrade_basic"
+					type: "item"
+				}
+			]
+			subtitle: "Automation Basics"
+			tasks: [{
+				id: "4A5B6C7D8E9F0004"
+				item: "rats:cheese_stick"
+				type: "item"
+			}]
+			title: "The Rat Staff"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7004"]
+			description: ["Rats have upgrade slots. You can craft specific upgrades to make them chop wood, mine blocks, or fight mobs."]
+			id: "1A2B3C4D5E6F7005"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8005"
+					item: {
+						Count: 1
+						id: "minecraft:iron_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3A4B5C6D7E8F9005"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+			]
+			subtitle: "Better, Faster, Stronger"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0005"
+					item: "rats:rat_upgrade_platter"
+					type: "item"
+				}
+				{
+					id: "5A6B7C8D9E0F1005"
+					item: "rats:rat_upgrade_lumberjack"
+					type: "item"
+				}
+			]
+			title: "Upgrades"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7003"]
+			description: [
+				"Sometimes, the Pied Piper spawns on Garbage Piles. Defeat him to get the Piper Hat."
+				""
+				"When wearing this hat, wild rats will no longer fear you, making taming significantly easier."
+			]
+			id: "1A2B3C4D5E6F7006"
+			rewards: [
+				{
+					count: 16
+					id: "2A3B4C5D6E7F8006"
+					item: "rats:pied_wool"
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9006"
+					item: "rats:rat_flute"
+					type: "item"
+				}
+			]
+			subtitle: "The Pied Piper"
+			tasks: [
+				{
+					entity: "rats:pied_piper"
+					id: "4A5B6C7D8E9F0006"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "5A6B7C8D9E0F1006"
+					item: {
+						Count: 1
+						id: "rats:piper_hat"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Master of Rats"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7003"]
+			description: [
+				"To breed rats, you need a Rat Cage. It is a multi-block structure."
+				""
+				"1. Place Rat Cages."
+				"2. Place a Rat Breeding Lantern inside."
+				"3. Put a male and female rat inside."
+				"4. Wait for the baby 'wiggle worm'."
+			]
+			id: "1A2B3C4D5E6F7007"
+			rewards: [
+				{
+					count: 4
+					id: "2A3B4C5D6E7F8007"
+					item: "rats:rat_tube_white"
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9007"
+					item: "rats:rat_hammock_white"
+					type: "item"
+				}
+			]
+			subtitle: "Rat Breeding"
+			tasks: [
+				{
+					count: 6L
+					id: "4A5B6C7D8E9F0007"
+					item: "rats:rat_cage"
+					type: "item"
+				}
+				{
+					id: "5A6B7C8D9E0F1007"
+					item: "rats:rat_breeding_lantern"
+					type: "item"
+				}
+			]
+			title: "Husbandry"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7005"]
+			description: [
+				"By giving a rat the Chef upgrade, they will cook food for you."
+				""
+				"Combine upgrades using the Upgrade Combiner to make super-rats!"
+			]
+			id: "1A2B3C4D5E6F7008"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8008"
+					item: {
+						Count: 1
+						id: "rats:chef_toque"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "3A4B5C6D7E8F9008"
+					item: "minecraft:beef"
+					type: "item"
+				}
+			]
+			subtitle: "Ratatouille?"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0008"
+					item: "rats:rat_upgrade_chef"
+					type: "item"
+				}
+				{
+					id: "5A6B7C8D9E0F1008"
+					item: "rats:upgrade_combiner"
+					type: "item"
+				}
+			]
+			title: "The Chef"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7003"]
+			description: [
+				"Look for the Plague Doctor villager. They trade emeralds for items like the Plague Doctor Mask and the Plague Tome."
+				""
+				"Be careful: Plague Rats can infect you, giving you negative effects for 5 minutes."
+			]
+			id: "1A2B3C4D5E6F7009"
+			rewards: [{
+				id: "2A3B4C5D6E7F8009"
+				item: "rats:herb_bundle"
+				type: "item"
+			}]
+			subtitle: "The Sickness"
+			tasks: [
+				{
+					icon: {
+						Count: 1
+						id: "rats:plague_doctor_mask"
+						tag: {
+							Damage: 0
+						}
+					}
+					id: "4A5B6C7D8E9F0009"
+					structure: "minecraft:village"
+					title: "Find a Plague Doctor"
+					type: "structure"
+				}
+				{
+					id: "5A6B7C8D9E0F1009"
+					item: {
+						Count: 1
+						id: "rats:plague_doctor_mask"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "The Plague Doctor"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7009"]
+			description: [
+				"A fearsome boss. Use a Plague Tome on a Plague Doctor to transform him into the Black Death."
+				""
+				"Tip: Enclose him in a box so he cannot fly away."
+			]
+			id: "1A2B3C4D5E6F7010"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8010"
+					item: {
+						Count: 1
+						id: "rats:black_death_mask"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9010"
+					item: {
+						Count: 1
+						id: "rats:plague_scythe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "Boss: The Black Death"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0010"
+					item: "rats:plague_tome"
+					type: "item"
+				}
+				{
+					entity: "rats:black_death"
+					id: "5A6B7C8D9E0F1010"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Black Death"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7001"]
+			description: [
+				"Compress Garbage Piles to create a Ball of Filth."
+				""
+				"Use this item on a wild rat to summon the Rat King. He is a spinning wheel of rats. Keep your distance and use a bow."
+			]
+			id: "1A2B3C4D5E6F7011"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8011"
+					item: {
+						Count: 1
+						id: "rats:rat_king_crown"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 3
+					id: "3A4B5C6D7E8F9011"
+					item: "rats:gold_rat_skull"
+					type: "item"
+				}
+			]
+			subtitle: "Boss: The Rat King"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0011"
+					item: "rats:filth_orb"
+					type: "item"
+				}
+				{
+					entity: "rats:rat_king"
+					id: "5A6B7C8D9E0F1011"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Rat King"
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7011"]
+			description: [
+				"To enter the dimension, you need a Chunky Cheese Token. This is an extremely rare drop from rats."
+				""
+				"Once obtained, right-click it on the ground to open the portal."
+			]
+			id: "1A2B3C4D5E6F7012"
+			rewards: [{
+				id: "2A3B4C5D6E7F8012"
+				item: "rats:rat_upgrade_archeologist"
+				type: "item"
+			}]
+			subtitle: "The Golden Ticket"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0012"
+					item: "rats:chunky_cheese_token"
+					type: "item"
+				}
+				{
+					dimension: "rats:ratlantis"
+					id: "5A6B7C8D9E0F1012"
+					title: "Visit Ratlantis"
+					type: "dimension"
+				}
+			]
+			title: "Ratlantis"
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7012"]
+			description: [
+				"In the jungles of Ratlantis, you will find Feral Ratlanteans. They are hostile."
+				""
+				"Kill them to get Feral Rat Claws and Cheese/Orichalcum ore."
+			]
+			id: "1A2B3C4D5E6F7013"
+			rewards: [{
+				id: "2A3B4C5D6E7F8013"
+				item: "rats:vial_of_consciousness"
+				type: "item"
+			}]
+			subtitle: "Feral Ratlanteans"
+			tasks: [
+				{
+					entity: "rats:feral_ratlantean"
+					id: "4A5B6C7D8E9F0013"
+					type: "kill"
+					value: 5L
+				}
+				{
+					count: 2L
+					id: "5A6B7C8D9E0F1013"
+					item: "rats:feral_rat_claw"
+					type: "item"
+				}
+			]
+			title: "The Locals"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7013"]
+			description: [
+				"Throw a Vial of Consciousness at a Feral Ratlantean to evolve it into the Neo-Ratlantean boss."
+				""
+				"He summons portals that shoot lasers and inflict status effects."
+			]
+			id: "1A2B3C4D5E6F7014"
+			rewards: [{
+				id: "2A3B4C5D6E7F8014"
+				item: "rats:rat_upgrade_psychic"
+				type: "item"
+			}]
+			subtitle: "Boss: Neo-Ratlantean"
+			tasks: [
+				{
+					entity: "rats:neo_ratlantean"
+					id: "4A5B6C7D8E9F0014"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "5A6B7C8D9E0F1014"
+					item: "rats:psionic_rat_brain"
+					type: "item"
+				}
+			]
+			title: "Evolution"
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7012"]
+			description: ["Locate the Ghost Pirate Ship in the Ratlantis ocean. At night, ring the bell on the deck to summon the Flying Dutchrat."]
+			id: "1A2B3C4D5E6F7015"
+			rewards: [
+				{
+					id: "2A3B4C5D6E7F8015"
+					item: {
+						Count: 1
+						id: "rats:pirat_hat"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3A4B5C6D7E8F9015"
+					item: {
+						Count: 1
+						id: "rats:ghost_pirat_cutlass"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "Boss: Flying Dutchrat"
+			tasks: [
+				{
+					entity: "rats:dutchrat"
+					id: "4A5B6C7D8E9F0015"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "5A6B7C8D9E0F1015"
+					item: {
+						Count: 1
+						id: "rats:pirat_cutlass"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Ghost Pirates"
+			x: -2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7012"]
+			description: ["Find the landing strip in the Ratlantis ocean. Use the Air Raid Siren nearby to summon the Rat Baron in his Biplane."]
+			id: "1A2B3C4D5E6F7016"
+			rewards: [{
+				id: "2A3B4C5D6E7F8016"
+				item: "rats:rat_upgrade_flight"
+				type: "item"
+			}]
+			subtitle: "Boss: Rat Baron"
+			tasks: [
+				{
+					entity: "rats:rat_baron"
+					id: "4A5B6C7D8E9F0016"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "5A6B7C8D9E0F1016"
+					item: "rats:biplane_wing"
+					type: "item"
+				}
+			]
+			title: "Aerial Superiority"
+			x: -4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"1A2B3C4D5E6F7014"
+				"1A2B3C4D5E6F7015"
+				"1A2B3C4D5E6F7016"
+			]
+			description: [
+				"The ultimate goal of Ratlantis. Craft the Ratlantean Automaton Head (rare drop from spirits or crafted with parts from all bosses)."
+				""
+				"Construct the Automaton frame using Marble Cheese and the Core, then place the head to summon the friendly Mech."
+			]
+			id: "1A2B3C4D5E6F7017"
+			rewards: [{
+				id: "2A3B4C5D6E7F8017"
+				item: "rats:rat_upgrade_nonbeliever"
+				type: "item"
+			}]
+			subtitle: "Mecha-Rat"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0017"
+					item: "rats:marbled_cheese_golem_core"
+					type: "item"
+				}
+				{
+					id: "5A6B7C8D9E0F1017"
+					item: "rats:ratlantean_automaton_head"
+					type: "item"
+				}
+			]
+			title: "Automation"
+			x: 4.0d
+			y: -6.0d
+		}
+	]
+	title: "The Rat Race"
+}

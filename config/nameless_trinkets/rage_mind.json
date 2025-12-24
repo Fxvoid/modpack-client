@@ -1,0 +1,7 @@
+{
+  "config": {
+    "damageMultiplierPercentage": 100.0,
+    "range": 50.0,
+    "isEnable": true
+  }
+}

@@ -1,0 +1,179 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "animus"
+	group: ""
+	icon: "animus:transcendent_blood_orb"
+	id: "7F65530114094000"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Animus expands Blood Magic with new rituals, sigils, and the return of the Tier 6 Altar."
+				""
+				"To start, craft the Key of Binding. This item allows you to share your Soul Network with friends. Give a bound key to a friend, and their sigils will drain YOUR LP."
+			]
+			id: "2B00020000000001"
+			rewards: [{
+				count: 2
+				id: "5AEC2939B6D4495D"
+				item: "bloodmagic:slate_infused"
+				type: "item"
+			}]
+			subtitle: "Shared Power"
+			tasks: [{
+				id: "4594ED37D959A67D"
+				item: "animus:key_of_binding"
+				type: "item"
+			}]
+			title: "Animus Reborn"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["2B00020000000001"]
+			description: [
+				"The Imperfect Ritual Stone allows for quick, single-use rituals."
+				""
+				"Right-click it with specific items to trigger effects like upgrading enchantments, gaining creative flight for 10 minutes, or removing repair costs."
+			]
+			id: "2B00020000000002"
+			rewards: [{
+				count: 4
+				id: "614395424CB1B841"
+				item: "minecraft:lapis_lazuli"
+				type: "item"
+			}]
+			subtitle: "Quick Magic"
+			tasks: [{
+				id: "4CF2DEFBD7EAB07F"
+				item: "animus:imperfect_ritual_stone"
+				type: "item"
+			}]
+			title: "Imperfect Rituals"
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2B00020000000001"]
+			description: [
+				"One of the most powerful new sigils. It accelerates ANY block entity up to 32x speed."
+				""
+				"Use this on furnaces, mob spawners, or even your Blood Altar to speed up processing."
+			]
+			id: "2B00020000000003"
+			rewards: [{
+				count: 2
+				id: "02B29493D4491508"
+				item: "bloodmagic:speedrune"
+				type: "item"
+			}]
+			subtitle: "Time Manipulation"
+			tasks: [{
+				id: "7C1B9D88F8781A81"
+				item: "animus:sigil_of_temporal_dominance"
+				type: "item"
+			}]
+			title: "Sigil of Temporal Dominance"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2B00020000000001"]
+			description: [
+				"Acts as a 'Ghost Mode' for scouting, but also functions as a reusable Totem of Undying."
+				""
+				"If you take fatal damage while this is active, it heals you to half health."
+			]
+			id: "2B00020000000004"
+			rewards: [{
+				id: "0DF714A744B60877"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			subtitle: "Ghost Mode"
+			tasks: [{
+				id: "4F50655BDEC58DC1"
+				item: "animus:sigil_of_the_free_soul"
+				type: "item"
+			}]
+			title: "Sigil of the Free Soul"
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2B00020000000001"]
+			description: [
+				"Allows for mass block replacement in a radius. Sneak-scroll to adjust the radius."
+				""
+				"Essential for terraforming or upgrading your base walls without breaking them first."
+			]
+			id: "2B00020000000005"
+			rewards: [{
+				count: 64
+				id: "16916A61F625DE62"
+				item: "minecraft:stone"
+				type: "item"
+			}]
+			subtitle: "World Eater"
+			tasks: [{
+				id: "1E2251AF09C124B8"
+				item: "animus:sigil_of_equivalency"
+				type: "item"
+			}]
+			title: "Sigil of Equivalency"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2B00020000000001"]
+			description: [
+				"Animus brings back the Tier 6 Altar!"
+				""
+				"To build it, you need Crystallized Demon Will Blocks. Place them as the pillars for the new tier."
+			]
+			id: "2B00020000000006"
+			rewards: [{
+				count: 4
+				id: "2D1D47F851C4A35C"
+				item: "bloodmagic:demoncrystal"
+				type: "item"
+			}]
+			subtitle: "The Final Tier"
+			tasks: [{
+				id: "208EE2E077C396E9"
+				item: "animus:transcendent_blood_orb"
+				type: "item"
+			}]
+			title: "Transcendent Blood Orb"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2B00020000000006"]
+			description: [
+				"If you have Iron's Spellbooks installed, Animus bridges the gap."
+				""
+				"The Blood-Infused Spellbook allows you to cast spells using LP instead of Mana, and your Living Armor gains XP from spellcasting."
+			]
+			id: "2B00020000000007"
+			rewards: [{
+				count: 5
+				id: "02E9B53C59C909C2"
+				item: "minecraft:experience_bottle"
+				type: "item"
+			}]
+			subtitle: "Blood Wizardry"
+			tasks: [{
+				id: "4E1E89298C04BE9F"
+				item: "animus:blood_infused_spellbook"
+				type: "item"
+			}]
+			title: "Spellbook Integration"
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	title: "Animus"
+}

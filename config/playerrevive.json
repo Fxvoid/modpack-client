@@ -1,0 +1,74 @@
+{
+  "banPlayerAfterDeath": false,
+  "bleeding": {
+    "bleedTime": 1200,
+    "triggerForCreative": true,
+    "bleedingMessage": true,
+    "bleedingMessageTrackingOnly": true,
+    "shouldGlow": true,
+    "bleedingEffects": [
+      {
+        "effect": "minecraft:slowness",
+        "amplifier": 2,
+        "duration": 10,
+        "hideParticles": true
+      }
+    ],
+    "affectHunger": true,
+    "remainingHunger": 2,
+    "initialDamageCooldown": 10,
+    "bleedingHealth": 10,
+    "disableMobDamage": false,
+    "disablePlayerDamage": false,
+    "disableOtherDamage": false,
+    "hasShaderEffect": false,
+    "changePermissionLevel": false,
+    "permissionLevel": 0,
+    "canBePushed": true,
+    "disableAllGUIAccess": true,
+    "disableInventoryAccess": true,
+    "disableChatAccess": false,
+    "disableServerCommands": true
+  },
+  "revive": {
+    "requiredReviveProgress": 100.0,
+    "progressPerPlayer": 1.0,
+    "exhaustion": 0.5,
+    "haltBleedTime": true,
+    "abortOnDamage": false,
+    "resetProgress": false,
+    "revivedEffects": [
+      {
+        "effect": "minecraft:slowness",
+        "amplifier": 2,
+        "duration": 1,
+        "hideParticles": true
+      }
+    ],
+    "reviveItem": "{id:\"item\",item:\"firstaid:bandage\"}",
+    "needReviveItem": true,
+    "consumeReviveItem": true,
+    "maxDistance": 3,
+    "healthAfter": 7
+  },
+  "sounds": {
+    "death": {
+      "sound": "playerrevive:death",
+      "volume": 1.0,
+      "pitch": 1.0
+    },
+    "revived": {
+      "sound": "playerrevive:revived",
+      "volume": 1.0,
+      "pitch": 1.0
+    }
+  },
+  "bypassDamageSources": [
+    "gorgon",
+    "death.attack.sgcraft:transient",
+    "death.attack.sgcraft:iris",
+    "vampirism_dbno",
+    "hordes:infection"
+  ],
+  "bleedInSingleplayer": false
+}

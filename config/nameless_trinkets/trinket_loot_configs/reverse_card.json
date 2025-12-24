@@ -1,0 +1,54 @@
+{
+  "item": "reverse_card",
+  "chance": 0.0005,
+  "loot_tables": [
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/end_city_treasure"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/simple_dungeon"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/nether_bridge"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/stronghold_library"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/stronghold_crossing"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/stronghold_corridor"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/bastion_treasure"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/bastion_other"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/bastion_bridge"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/bastion_hoglin_stable"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/ancient_city"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/ancient_city_ice_box"
+    }
+  ]
+}

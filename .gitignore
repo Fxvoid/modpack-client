@@ -1,0 +1,25 @@
+# 1. Ignore everything in the repository by default
+*
+!.gitignore
+
+# 2. Allow specific folders (and their contents recursively)
+!/config/
+!/config/**
+
+!/defaultconfigs/
+!/defaultconfigs/**
+
+!/kubejs/
+!/kubejs/**
+
+# 3. Handle the 'mods' folder separately
+# Allow the folder itself to be seen
+!/mods/
+
+# Allow .jar files inside the mods folder
+!/mods/*.jar
+
+!update_mods.bat
+
+#Ignore cataclysm cause it's too fat for github
+/mods/L_Enders_Cataclysm-3.16.jar

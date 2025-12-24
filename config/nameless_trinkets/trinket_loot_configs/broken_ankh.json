@@ -1,0 +1,26 @@
+{
+  "item": "broken_ankh",
+  "chance": 0.0005,
+  "loot_tables": [
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/nether_bridge"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/desert_pyramid"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/bastion_treasure"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/ancient_city"
+    },
+    {
+      "f_135804_": "minecraft",
+      "f_135805_": "chests/ancient_city_ice_box"
+    }
+  ]
+}

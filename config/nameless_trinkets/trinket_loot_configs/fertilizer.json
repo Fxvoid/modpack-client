@@ -1,0 +1,10 @@
+{
+  "item": "fertilizer",
+  "chance": 0.00001,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/village"
+    }
+  ]
+}

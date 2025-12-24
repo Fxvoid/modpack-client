@@ -1,0 +1,10 @@
+{
+  "item": "blaze_nucleus",
+  "chance": 0.01,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/nether"
+    }
+  ]
+}

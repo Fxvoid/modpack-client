@@ -1,0 +1,416 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "theurgy"
+	group: ""
+	icon: "theurgy:pyromantic_brazier"
+	id: "5A8F31E6429A20B1"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Many Alchemical devices in Theurgy require &6Heat&r to function. You cannot use vanilla campfires or furnaces; you must use a &6Pyromantic Brazier&r."
+				""
+				"To use it, place the Brazier under the machine you wish to heat and insert fuel (Coal, Charcoal, etc.)."
+			]
+			id: "0D42D0F8AA81A89F"
+			rewards: [{
+				count: 16
+				id: "3A043E275B90C60B"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "511DB1F87D8B3AD8"
+				item: "theurgy:pyromantic_brazier"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000001"]
+			description: [
+				"The first essential reagent is &bMercury&r. This is obtained by heating a &bMercury Distiller&r on top of a Brazier and inserting items."
+				""
+				"&6Yields:&r The rarity of the input item dictates the output."
+				"- &7Stone:&r Requires multiple blocks for 1 Shard."
+				"- &bDiamonds:&r Yields ~10 Shards per gem."
+				""
+				"Mercury Shards are used for crafting components, wires, and generating energy later on."
+			]
+			id: "10E9699BE45D8AE0"
+			rewards: [{
+				id: "0B995C171B8F66B5"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "760B9EFBDD2935A6"
+					item: "theurgy:mercury_distiller"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "46D3A798F135D966"
+					item: "theurgy:mercury_shard"
+					type: "item"
+				}
+			]
+			title: "Mercurial Distillation"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			description: [
+				"Theurgy has its own logistics system for Items, Fluids, and Energy."
+				"- &9Extractor:&r Pulls from a block (Blue line)."
+				"- &aInserter:&r Pushes into a block (Green line)."
+				"- &6Wire:&r Connects them."
+				"- &dWand:&r Acts as a wrench to configure sides."
+				""
+				"&eFilters:&r"
+				"- &bList Filter:&r Whitelist/Blacklist specific items."
+				"- &bAttribute Filter:&r Filters by metadata (e.g., \"Is Furnace Fuel\" or \"Is Gem\"). This is incredibly powerful for automation."
+			]
+			id: "525F6AF4EA57D722"
+			tasks: [
+				{
+					id: "164A95B6748D227A"
+					item: "theurgy:mercurial_item_extractor"
+					type: "item"
+				}
+				{
+					id: "2C090DFE8AF6378A"
+					item: "theurgy:mercurial_item_inserter"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "354D8BE7C2A452A9"
+					item: "theurgy:mercurial_copper_wire"
+					type: "item"
+				}
+				{
+					id: "4683A7A1BB00A15A"
+					item: "theurgy:mercurial_wand"
+					type: "item"
+				}
+			]
+			title: "Alchemical Logistics"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000001"]
+			description: [
+				"To dissolve matter into &eSulfur&r, you need a solvent."
+				""
+				"1. Place a &bSal Ammoniac Tank&r."
+				"2. Place a &bSal Ammoniac Accumulator&r on top of the tank."
+				"3. Fill the Accumulator (top block) with &9Water&r and &dSal Ammoniac Crystals&r (mined from ore)."
+				"4. The Tank (bottom block) will fill with Sal Ammoniac fluid."
+			]
+			id: "6F627282D5A882E7"
+			rewards: [{
+				count: 16
+				id: "7460CF12058437DB"
+				item: "theurgy:sal_ammoniac_crystal"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "3D000410694D5646"
+					item: "theurgy:sal_ammoniac_tank"
+					type: "item"
+				}
+				{
+					id: "2000000000000009"
+					item: "theurgy:sal_ammoniac_accumulator"
+					type: "item"
+				}
+				{
+					id: "200000000000000A"
+					item: "theurgy:sal_ammoniac_bucket"
+					type: "item"
+				}
+			]
+			title: "Sal Ammoniac"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1000000000000004"]
+			description: [
+				"The &eLiquefaction Cauldron&r breaks items down into their \"Soul,\" represented as &eAlchemical Sulfur&r."
+				""
+				"1. Place the Cauldron over a heated Brazier."
+				"2. Pipe in &dSal Ammoniac&r fluid."
+				"3. Insert an item (e.g., Potato, Wheat, Iron)."
+				""
+				"The resulting Sulfur preserves the \"concept\" of the item (e.g., Alchemical Sulfur [Potato])."
+			]
+			id: "1E08D7C11885448D"
+			tasks: [
+				{
+					id: "200000000000000B"
+					item: "theurgy:liquefaction_cauldron"
+					type: "item"
+				}
+				{
+					id: "200000000000000C"
+					item: "theurgy:alchemical_sulfur_potato"
+					title: "Alchemical Sulfur (Potato)"
+					type: "item"
+				}
+			]
+			title: "Liquefaction (Sulfur)"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1000000000000001"]
+			description: [
+				"Matter also consists of a \"Body,\" represented as &fAlchemical Salt&r."
+				""
+				"1. Place a &8Calcination Oven&r over a heated Brazier."
+				"2. Insert items to burn them down into Salt."
+				""
+				"&6Salt Types:&r"
+				"The input determines the Salt type, which is required for the final reconstruction process."
+				"- &7Strata:&r Stone, Dirt, Gravel."
+				"- &bMinerals:&r Ores, Ingots, Gems."
+				"- &aPlants:&r Crops, Logs, Saplings."
+				"- &cCreatures:&r Meat, Leather, Bones."
+			]
+			id: "0092AB3FF5E01D96"
+			tasks: [
+				{
+					id: "200000000000000D"
+					item: "theurgy:calcination_oven"
+					type: "item"
+				}
+				{
+					id: "200000000000000E"
+					item: "theurgy:alchemical_salt_strata"
+					type: "item"
+				}
+				{
+					id: "200000000000000F"
+					item: "theurgy:alchemical_salt_mineral"
+					type: "item"
+				}
+				{
+					id: "09772352C85B8C6A"
+					item: "theurgy:alchemical_salt_plant"
+					type: "item"
+				}
+			]
+			title: "Calcination (Salt)"
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1000000000000005"]
+			description: [
+				"&aAlchemical Niter&r is the binding agent used to upgrade tiers or multiply resources."
+				""
+				"1. Place a &6Fermentation Vat&r."
+				"2. Fill with &9Water&r."
+				"3. Add an &eAlchemical Sulfur&r (e.g., Sulfur [Potato])."
+				"4. Add organic matter (Saplings, Crops) OR a &aFermentation Starter&r."
+				"5. &6Shift-Right-Click&r with an empty hand to close the lid and begin processing."
+				""
+				"&oTip: Niter is categorized by tags (e.g., Abundant Crops, Common Gems).&r"
+			]
+			id: "63EC2934F36D0388"
+			tasks: [
+				{
+					id: "537BF5344C9E3E28"
+					item: "theurgy:fermentation_vat"
+					type: "item"
+				}
+				{
+					id: "1B6E6E2DF708CDB5"
+					item: "theurgy:fermentation_starter"
+					type: "item"
+				}
+			]
+			title: "Fermentation (Niter)"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1000000000000007"]
+			description: [
+				"The &3Digestion Vat&r performs two main functions:"
+				""
+				"1. &ePurified Gold:&r Combine Water + Salt + Gold Ingot. Needed for later crafting."
+				"2. &aTier Conversion:&r You can input Alchemical Niter to upgrade or downgrade tiers (e.g., convert 4 Common Niter into 1 Rare Niter, or vice versa)."
+				""
+				"&oRequires Shift-Right-Click to close and process.&r"
+			]
+			id: "0BAD0D6F26A7A80B"
+			tasks: [
+				{
+					id: "2000000000000013"
+					item: "theurgy:digestion_vat"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2000000000000014"
+					item: "theurgy:purified_gold"
+					type: "item"
+				}
+			]
+			title: "Digestion (Purified Gold & Tiers)"
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			description: [
+				"To perform Reformation (Transmutation), you need &dMercury Flux&r (Energy)."
+				""
+				"1. Construct a &7Mercury Catalyst&r."
+				"2. Feed it &bMercury Shards&r (or Mercury fluid)."
+				"3. Place a &5Sulfuric Flux Emitter&r on top of the Catalyst."
+				""
+				"The Emitter will shoot a beam to power your Reformation pedestals."
+			]
+			id: "36C6B083717E8381"
+			tasks: [
+				{
+					id: "2000000000000015"
+					item: "theurgy:mercury_catalyst"
+					type: "item"
+				}
+				{
+					id: "2000000000000016"
+					item: "theurgy:sulfuric_flux_emitter"
+					type: "item"
+				}
+			]
+			title: "Mercurial Power"
+			x: 4.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1000000000000008"]
+			description: [
+				"This is where Alchemy shines: converting one item into another. You need three pedestals placed near your Flux Emitter:"
+				""
+				"1. &8Source Pedestal:&r Holds the input sulfur (the currency)."
+				"2. &8Target Pedestal:&r Holds the sulfur you want to copy (the blueprint). &c(Not Consumed)&r."
+				"3. &eResult Pedestal:&r Where the new sulfur appears."
+				""
+				"&6Linking:&r Shift-Right-Click the Source, Target, and Result pedestals with the Flux Emitter, then place the Emitter on the Catalyst."
+				""
+				"&aThe Niter Bonus:&r"
+				"If you use Alchemical Sulfur in the source, conversion is 1:1."
+				"If you use &aAlchemical Niter&r in the source (matching the tier of the target), you create &bmultiple&r target sulfurs for one niter!"
+			]
+			id: "100000000000000A"
+			tasks: [
+				{
+					id: "2000000000000017"
+					item: "theurgy:reformation_source_pedestal"
+					type: "item"
+				}
+				{
+					id: "2000000000000018"
+					item: "theurgy:reformation_target_pedestal"
+					type: "item"
+				}
+				{
+					id: "2000000000000019"
+					item: "theurgy:reformation_result_pedestal"
+					type: "item"
+				}
+			]
+			title: "Reformation (Transmutation)"
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["100000000000000A"]
+			description: [
+				"The final step: Turning your Alchemical Sulfur back into a physical item."
+				""
+				"1. Place an &6Incubator&r over a heated Brazier."
+				"2. Place one of each vessel adjacent to the Incubator:"
+				"   - &bMercury Vessel:&r Fill with Mercury Shards."
+				"   - &fSalt Vessel:&r Fill with the correct Salt type for your item (e.g., Mineral Salt for Ingots)."
+				"   - &eSulfur Vessel:&r Fill with the Sulfur you wish to instantiate."
+				"3. The Incubator will consume these reagents and spawn the physical item."
+			]
+			id: "100000000000000B"
+			rewards: [{
+				count: 16
+				id: "418848F53A32612D"
+				item: "appliedenergistics2:certus_quartz_crystal"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "200000000000001A"
+					item: "theurgy:incubator"
+					type: "item"
+				}
+				{
+					id: "200000000000001B"
+					item: "theurgy:incubator_mercury_vessel"
+					type: "item"
+				}
+				{
+					id: "200000000000001C"
+					item: "theurgy:incubator_salt_vessel"
+					type: "item"
+				}
+				{
+					id: "200000000000001D"
+					item: "theurgy:incubator_sulfur_vessel"
+					type: "item"
+				}
+			]
+			title: "Incubation (Reconstruction)"
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			description: [
+				"The &dDivination Rod&r helps locate specific blocks or ores."
+				""
+				"1. Place the block you want to find on the ground."
+				"2. Shift-Right-Click the block with the rod to attune it."
+				"3. Hold Right-Click to scan. A glowing trail will lead you to the nearest matching block."
+			]
+			id: "100000000000000C"
+			tasks: [{
+				id: "200000000000001E"
+				item: {
+					Count: 1
+					id: "theurgy:divination_rod_t1"
+					tag: {
+						Damage: 0
+						"theurgy:divination.setting.allow_attuning": 1b
+						"theurgy:divination.setting.allowed_blocks_tag": "theurgy:divination_rod_t1_allowed_blocks"
+						"theurgy:divination.setting.disallowed_blocks_tag": "theurgy:divination_rod_t1_disallowed_blocks"
+						"theurgy:divination.setting.duration": 40
+						"theurgy:divination.setting.max_damage": 8
+						"theurgy:divination.setting.range": 96
+						"theurgy:divination.setting.tier": "minecraft:stone"
+					}
+				}
+				type: "item"
+			}]
+			title: "Finding the Path"
+			x: -1.5d
+			y: 0.0d
+		}
+	]
+	title: "Theurgy - Alchemical Replication"
+}

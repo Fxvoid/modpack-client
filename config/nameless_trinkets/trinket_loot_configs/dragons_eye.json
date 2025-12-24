@@ -1,0 +1,18 @@
+{
+  "item": "dragons_eye",
+  "chance": 0.1,
+  "loot_tables": [
+    {
+      "f_135804_": "iceandfire",
+      "f_135805_": "entities/dragon/fire_dragon_male"
+    },
+    {
+      "f_135804_": "iceandfire",
+      "f_135805_": "entities/dragon/ice_dragon_male"
+    },
+    {
+      "f_135804_": "iceandfire",
+      "f_135805_": "entities/dragon/lightning_dragon_male"
+    }
+  ]
+}

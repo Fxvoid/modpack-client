@@ -1,0 +1,14 @@
+{
+  "item": "wooden_stick",
+  "chance": 0.0025,
+  "loot_tables": [
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/easy"
+    },
+    {
+      "f_135804_": "lootintegrations",
+      "f_135805_": "chests/village"
+    }
+  ]
+}

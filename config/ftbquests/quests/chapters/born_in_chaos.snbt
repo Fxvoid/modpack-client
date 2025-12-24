@@ -1,0 +1,349 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "born_in_chaos"
+	group: ""
+	icon: {
+		Count: 1
+		id: "born_in_chaos_v1:nightmare_scythe"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "6EF9A2C1D3B4E5F6"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"The world has changed. The undead are restless, evolving into new, horrifying forms."
+				""
+				"Be wary of the &cDecaying&r, &bSpirits&r, and the &5Nightmares&r that stalk the dark."
+			]
+			icon: "minecraft:rotten_flesh"
+			id: "1000000000000000"
+			rewards: [
+				{
+					id: "1000000000000002"
+					item: {
+						Count: 1
+						id: "minecraft:iron_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 3
+					id: "1000000000000003"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "1000000000000001"
+				title: "The Awakening"
+				type: "checkmark"
+			}]
+			title: "A World in Decay"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			description: ["Many of the new entities in this world are not of flesh and blood. You will encounter Spirits floating through the world. Slaying them releases their Ethereal essence."]
+			id: "1000000000000004"
+			rewards: [{
+				id: "1000000000000006"
+				type: "xp"
+				xp: 500
+			}]
+			tasks: [{
+				count: 8L
+				id: "1000000000000005"
+				item: "born_in_chaos_v1:ethereal_spirit"
+				type: "item"
+			}]
+			title: "Restless Spirits"
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			description: ["The skeletons here are... different. Some are charred, some are overgrown. Hunt down the variants to find Charred Bones."]
+			id: "1000000000000007"
+			rewards: [{
+				count: 16
+				id: "1000000000000009"
+				item: "minecraft:arrow"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "1000000000000008"
+				item: "born_in_chaos_v1:charred_bone"
+				type: "item"
+			}]
+			title: "Rattled"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"1000000000000004"
+				"1000000000000007"
+			]
+			description: ["By combining the essence of the restless dead with iron, or finding it in the dangerous structures scattered across the world, you can obtain Dark Metal. This is the foundation of your new arsenal."]
+			id: "1000000000000010"
+			rewards: [{
+				id: "1000000000000012"
+				item: "born_in_chaos_v1:dark_metal_block"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "1000000000000011"
+				item: "born_in_chaos_v1:dark_metal_ingot"
+				type: "item"
+			}]
+			title: "Dark Metal"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			description: ["Forge a set of armor to protect yourself from the harder hitting mobs like the Skeleton Thrasher."]
+			icon: {
+				Count: 1b
+				id: "born_in_chaos_v1:dark_metal_chestplate"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1000000000000013"
+			rewards: [{
+				id: "1000000000000018"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [
+				{
+					id: "1000000000000014"
+					item: {
+						Count: 1b
+						id: "born_in_chaos_v1:dark_metal_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1000000000000015"
+					item: {
+						Count: 1b
+						id: "born_in_chaos_v1:dark_metal_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1000000000000016"
+					item: {
+						Count: 1b
+						id: "born_in_chaos_v1:dark_metal_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1000000000000017"
+					item: {
+						Count: 1b
+						id: "born_in_chaos_v1:dark_metal_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Heavy Plating"
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			description: ["Dark Metal tools possess higher durability and mining speed than Iron."]
+			id: "1000000000000019"
+			rewards: [{
+				count: 3
+				id: "1000000000000021"
+				item: "born_in_chaos_v1:dark_metal_nugget"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000020"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "born_in_chaos_v1:dark_metal_pickaxe"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "born_in_chaos_v1:dark_metal_axe"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "born_in_chaos_v1:dark_metal_shovel"
+								tag: {
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				title: "Any Dark Metal Tool"
+				type: "item"
+			}]
+			title: "Tools of Chaos"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			description: ["In the darkest biomes, or spawning rarely at night, you will find the Nightmare Stalker. It is a terrifying beast. Slay it to obtain its stalks."]
+			id: "1000000000000022"
+			rewards: [{
+				id: "1000000000000024"
+				item: "minecraft:splash_potion"
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				count: 6L
+				id: "1000000000000023"
+				item: "born_in_chaos_v1:nightmare_stalk"
+				type: "item"
+			}]
+			title: "Harvesting Nightmares"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1000000000000022"]
+			description: ["The Nightmare Scythe is a weapon of mass destruction, capable of sweeping through crowds of enemies."]
+			id: "1000000000000025"
+			rewards: [{
+				id: "1000000000000027"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000026"
+				item: {
+					Count: 1
+					id: "born_in_chaos_v1:nightmare_scythe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "The Reaping"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			description: [
+				"Find a patch of pumpkins or the Pumpkin structures."
+				"The Legend says that breaking a specific carved pumpkin with a Spirit enclosed may summon him."
+				""
+				"&4Warning: Boss Battle"
+			]
+			id: "1000000000000028"
+			rewards: [
+				{
+					id: "1000000000000030"
+					type: "xp"
+					xp: 2000
+				}
+				{
+					id: "1000000000000031"
+					item: "minecraft:totem_of_undying"
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				entity: "born_in_chaos_v1:lord_pumpkinhead"
+				icon: "born_in_chaos_v1:pumpkin_head"
+				id: "1000000000000029"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Lord Pumpkinhead"
+			x: 3.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			description: ["You have begun to master the chaos. Craft the Supreme Magnifier to increase your reach and power."]
+			id: "1000000000000032"
+			rewards: [{
+				count: 3
+				id: "1000000000000034"
+				item: "minecraft:emerald_block"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000033"
+				item: "born_in_chaos_v1:supreme_magnifier"
+				type: "item"
+			}]
+			title: "The Supreme System"
+			x: -3.5d
+			y: 6.0d
+		}
+		{
+			description: ["The Glutton is a grotesque zombie variant. Do not let it corner you."]
+			id: "1000000000000035"
+			optional: true
+			rewards: [{
+				count: 16
+				id: "1000000000000037"
+				item: "minecraft:cooked_porkchop"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				entity: "born_in_chaos_v1:glutton"
+				icon: "born_in_chaos_v1:monster_flesh"
+				id: "1000000000000036"
+				type: "kill"
+				value: 5L
+			}]
+			title: "The Gluttony"
+			x: -4.0d
+			y: 3.0d
+		}
+	]
+	title: "Born in Chaos"
+}

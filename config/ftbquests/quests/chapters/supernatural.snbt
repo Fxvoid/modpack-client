@@ -1,0 +1,310 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "supernatural"
+	group: ""
+	icon: "vampirism:vampire_fang"
+	id: "5A91220115095555"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"The world is darker than it seems. Two ancient curses plague the land."
+				""
+				"To the Left: The path of blood, elegance, and immortality."
+				"To the Right: The path of nature, fury, and the beast."
+				""
+				"Choose wisely. These paths are often mutually exclusive."
+			]
+			id: "78E4E5F337553C7E"
+			rewards: [{
+				id: "2000000000000000"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Choose Your Path"
+			tasks: [{
+				id: "3000000000000000"
+				title: "The Crossroads"
+				type: "checkmark"
+			}]
+			title: "Supernatural Origins"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			description: [
+				"To become a Vampire, you must be bitten by one, or inject yourself with their blood."
+				""
+				"The Sanguine Injection gives you the effect 'Sanguinare Vampiris'. Wait for the effect to finish to turn."
+			]
+			id: "7A2405F18720F9A8"
+			rewards: [{
+				id: "2000000000000001"
+				item: {
+					Count: 1
+					id: "vampirism:blood_bottle"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "The Turn"
+			tasks: [{
+				id: "3000000000000001"
+				item: "vampirism:injection_sanguinare"
+				type: "item"
+			}]
+			title: "Sanguine Injection"
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1000000000000001"]
+			description: [
+				"As a Vampire, standard food does nothing. You must drink blood."
+				""
+				"Use empty bottles on red-particle mobs (or villagers) to harvest blood, or feed directly using your fangs (Keybind V)."
+			]
+			id: "4E8ED51C4507E3AE"
+			rewards: [{
+				count: 3
+				id: "2000000000000002"
+				item: {
+					Count: 1
+					id: "vampirism:blood_bottle"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "Thirst"
+			tasks: [{
+				id: "3000000000000002"
+				item: {
+					Count: 1
+					id: "vampirism:blood_bottle"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Blood Sustenance"
+			x: -3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1000000000000001"]
+			description: [
+				"To level up, you must perform rituals at the Altar of Inspiration."
+				""
+				"Fill the altar with blood bottles and shift-right click it with a Human Heart (found in dungeons or from vampire hunters)."
+			]
+			id: "2375BB1306DABEDD"
+			rewards: [{
+				id: "2000000000000003"
+				item: "vampirism:human_heart"
+				type: "item"
+			}]
+			subtitle: "Leveling Up"
+			tasks: [{
+				id: "3000000000000003"
+				item: "vampirism:altar_inspiration"
+				type: "item"
+			}]
+			title: "Altar of Inspiration"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"With 'Vampiric Ageing', you become stronger simply by surviving."
+				""
+				"You must sleep in a Coffin during the day. As days pass, your Rank increases, granting stat buffs."
+			]
+			id: "7201EB0DAB1FA964"
+			rewards: [{
+				id: "2000000000000004"
+				item: "minecraft:clock"
+				type: "item"
+			}]
+			subtitle: "Ageing"
+			tasks: [{
+				id: "3000000000000004"
+				item: "vampirism:coffin_white"
+				type: "item"
+			}]
+			title: "The Long Sleep"
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			description: ["The ultimate goal. Reach the highest level of Vampirism to become a Lord of the night."]
+			id: "451E58D4FEE5D5F7"
+			rewards: [{
+				id: "2000000000000005"
+				item: "vampirism:pure_blood_4"
+				type: "item"
+			}]
+			subtitle: "Max Level"
+			tasks: [{
+				advancement: "vampirism:vampire/max_level"
+				criterion: ""
+				id: "3000000000000005"
+				type: "advancement"
+			}]
+			title: "Vampire Lord"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			description: [
+				"To become a Werewolf, you must be bitten by one in the wild, or find Infected Wolfsbane."
+				""
+				"Once infected, wait for a full moon or nightfall to undergo the painful transformation."
+			]
+			id: "07DEF95911982020"
+			rewards: [{
+				count: 5
+				id: "2000000000000006"
+				item: "minecraft:mutton"
+				type: "item"
+			}]
+			subtitle: "The Infection"
+			tasks: [{
+				id: "3000000000000006"
+				item: "werewolves:wolfsbane"
+				type: "item"
+			}]
+			title: "Embrace the Beast"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			description: [
+				"As a werewolf, you are carnivorous. Livers are a delicacy and help you maintain your form."
+				""
+				"You gain strength and speed, but you are forced to transform during the full moon."
+			]
+			id: "2C640F550F776019"
+			rewards: [{
+				count: 3
+				id: "2000000000000007"
+				item: "werewolves:liver"
+				type: "item"
+			}]
+			subtitle: "Carnivore"
+			tasks: [{
+				id: "3000000000000007"
+				item: "werewolves:liver"
+				type: "item"
+			}]
+			title: "Feeding the Wolf"
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			description: [
+				"Not interested in being a monster? Become a Hunter."
+				""
+				"Craft a stake and find a Hunter Trainer in a village. You can level up to gain skills to fight the supernatural."
+			]
+			id: "596CB1EDB46E3DBA"
+			rewards: [{
+				count: 3
+				id: "2000000000000008"
+				item: "vampirism:garlic_bread"
+				type: "item"
+			}]
+			subtitle: "The Human Path"
+			tasks: [
+				{
+					id: "3000000000000008"
+					item: {
+						Count: 1
+						id: "vampirism:stake"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3000000000000009"
+					item: "vampirism:crossbow_arrow"
+					type: "item"
+				}
+			]
+			title: "Vampire Hunter"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: ["The totem allows you to track your progress and potentially control your transformation better."]
+			id: "7D7027E72D691CD4"
+			rewards: [{
+				count: 16
+				id: "2000000000000010"
+				item: "minecraft:bone"
+				type: "item"
+			}]
+			subtitle: "Wolf Progression"
+			tasks: [{
+				id: "3000000000000010"
+				item: "werewolves:totem"
+				type: "item"
+			}]
+			title: "The Totem"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000008"]
+			description: ["Garlic is the best defense against vampires. You can craft diffusers to protect your base."]
+			id: "4B18C3F01C0F605B"
+			rewards: [{
+				id: "2000000000000011"
+				item: "vampirism:garlic_bread"
+				type: "item"
+			}]
+			subtitle: "Protection"
+			tasks: [{
+				id: "3000000000000011"
+				item: "vampirism:garlic_diffuser_normal"
+				type: "item"
+			}]
+			title: "Garlic Defense"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			description: ["Werewolves are vulnerable to Silver. If you are fighting other werewolves, or just want to be prepared, craft Silver weapons."]
+			id: "3EA00AFBFA74D7F0"
+			rewards: [{
+				count: 5
+				id: "2000000000000012"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			subtitle: "Silver Weakness"
+			tasks: [{
+				id: "3000000000000012"
+				item: "werewolves:silver_ingot"
+				type: "item"
+			}]
+			title: "Silver"
+			x: 3.5d
+			y: 1.5d
+		}
+	]
+	title: "Supernatural"
+}

@@ -1,0 +1,572 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "goety_the_dark_arts"
+	group: ""
+	icon: "goety:black_book"
+	id: "7B774F5C715BE8F7"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"\"The ultimate guide to the dark arts.\""
+				""
+				"To begin your journey into Goety, you will need information. The &6Black Book&r is your in-game documentation for everything regarding rituals, servants, and brewing."
+				""
+				"While this quest line will guide you, the book contains the specific recipes and structural layouts for rituals."
+			]
+			id: "10CEBD8741FD8B1F"
+			rewards: [{
+				id: "67A5DC73703FFE8E"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "113FAFFF79657167"
+				item: "goety:black_book"
+				type: "item"
+			}]
+			title: "Introduction: The Black Book"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000000000001"]
+			description: [
+				"Goety relies on &bSoul Energy&r. This is the magic used by Illagers."
+				""
+				"At night, you will find &cWraiths&r. Hunt them down! They have a chance to drop &bEctoplasm&r. Use this to craft a &6Totem of Roots&r."
+				""
+				"&lHow it works:&r"
+				"Keep the Totem in your inventory (or Curios Charm slot). When you kill mobs, the Totem fills with Soul Energy. Illagers provide more energy than standard mobs."
+			]
+			icon: "goety:totem_of_roots"
+			id: "6E0E6572A031DE64"
+			rewards: [{
+				count: 16
+				id: "37FB0BEB939FA017"
+				item: "minecraft:lapis_lazuli"
+				type: "item"
+			}]
+			subtitle: "Harvesting the dead"
+			tasks: [
+				{
+					entity: "goety:wraith"
+					icon: "goety:wraith_spawn_egg"
+					id: "03DCE9FF9199186F"
+					type: "kill"
+					value: 3L
+				}
+				{
+					id: "7ABDFA6FD30205BA"
+					item: "goety:ectoplasm"
+					type: "item"
+				}
+				{
+					id: "106A51328E32D464"
+					item: {
+						Count: 1
+						id: "goety:totem_of_roots"
+						tag: {
+							"goety:soul_energy": 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Soul Harvesting"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000000000002"]
+			description: [
+				"To cast spells, you need a Wand."
+				""
+				"1. Craft a &6Haunted Sapling&r using your Totem and 4 vanilla saplings."
+				"2. Plant it and bone meal it to get Haunted Logs."
+				"3. Craft an &bEmpty Focus&r using Amethyst Shards."
+				"4. Combine these to make the &dDark Wand&r."
+				""
+				"&lControls:&r"
+				"&eZ:&r Open Focus Slot (to insert a focus)."
+				"&eX:&r Open Focus Wheel (to switch spells if you have a Focus Bag)."
+			]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					Parent: {
+						Items: [ ]
+						Size: 1
+						slot: 0
+					}
+				}
+				id: "goety:dark_wand"
+			}
+			id: "390C6D779129EF8B"
+			rewards: [{
+				id: "0A212BB5B5F7CFD4"
+				item: "goety:focus_bag"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "05C4E5AC1112774B"
+					item: "goety:haunted_sapling"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6414E33BBC9748C2"
+					item: "goety:haunted_planks"
+					type: "item"
+				}
+				{
+					id: "17BDB4BB56FDD497"
+					item: {
+						Count: 1
+						id: "goety:dark_wand"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Your First Wand"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000000000003"]
+			description: [
+				"Let's craft your first spell. The &bSoul Light Focus&r shoots a projectile that places a light source where it lands."
+				""
+				"Insert the focus into your wand (Press &eZ&r), ensure you have Soul Energy in your Totem, and right-click to cast."
+			]
+			id: "26502E0F475006E0"
+			tasks: [{
+				id: "59EB27F101BF7A68"
+				item: "goety:soul_light_focus"
+				type: "item"
+			}]
+			title: "Casting Light"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000000000002"]
+			description: [
+				"Crafting items manually is tedious. The &8Cursed Infuser&r uses the dark energy of a &cMonster Spawner&r to transmute items."
+				""
+				"1. Find a Monster Spawner."
+				"2. Place the Cursed Infuser directly on top of it."
+				"3. Right-click the Infuser with specific items to transform them (e.g., Iron Ingot -> Cursed Metal Ingot)."
+			]
+			icon: "goety:cursed_infuser"
+			id: "4BC4EF041F9D43B1"
+			rewards: [{
+				count: 8
+				id: "632F7E0014214F1F"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "405FA8A5408DAF96"
+					item: "goety:cursed_infuser"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "497BBC82E1F97DDD"
+					item: "goety:cursed_metal_ingot"
+					type: "item"
+				}
+			]
+			title: "Cursed Transmutation"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000000000005"]
+			description: [
+				"Running back to a dungeon is annoying. Let's move the spawner."
+				""
+				"1. Craft a &cFire Spawn Cage&r (Requires Cursed Metal and an Empty Focus)."
+				"2. Right-click a Monster Spawner with it. This breaks the spawner and captures it."
+				"3. Craft a &8Cursed Cage&r (Decorative/Structural block)."
+				"4. Right-click the Cursed Cage with your filled Fire Spawn Cage to place the spawner inside."
+				""
+				"&oNote: Place your Cursed Infuser on top of this new cage to continue transmuting at home.&r"
+			]
+			icon: "goety:fire_spawn_cage"
+			id: "3C0A94EAE2935F6B"
+			tasks: [
+				{
+					id: "7A14C71804914021"
+					item: "goety:fire_spawn_cage"
+					type: "item"
+				}
+				{
+					id: "69EEFDE669E9DFF1"
+					item: "goety:cursed_cage"
+					type: "item"
+				}
+			]
+			title: "Stealing Spawners"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000000000006"]
+			description: [
+				"Rituals allow for complex crafting, summoning, and enchanting."
+				""
+				"&lThe Setup:&r"
+				"1. Place a &8Cursed Cage&r down (Does NOT need a spawner inside for rituals, but needs Soul Energy supply)."
+				"2. Place the &5Dark Altar&r directly on top of the Cage."
+				"3. Place &8Pedestals&r around the Altar (within 8 blocks)."
+				""
+				"&lTo Activate:&r"
+				"Place the recipe ingredients on the pedestals and right-click the Altar with the \"Catalyst\" item."
+				""
+				"&oTip: You will need to supply Soul Energy to the Cursed Cage beneath the Altar using a Totem or an Arca.&r"
+			]
+			icon: "goety:dark_altar"
+			id: "1B40B1BC5EEDD160"
+			rewards: [{
+				id: "63ADEEA410257C9D"
+				item: {
+					Count: 1
+					id: "goety:totem_of_souls"
+					tag: {
+						"goety:soul_energy": 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "78BB9358C96DEDDA"
+					item: "goety:dark_altar"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1828C0CA860D14AA"
+					item: "goety:pedestal"
+					type: "item"
+				}
+			]
+			title: "The Dark Altar"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000000000007"]
+			description: [
+				"You don't have to fight alone. You can summon Servants via &bFocuses&r (Temporary/Mana cost) or &5Rituals&r (Permanent)."
+				""
+				"&lTypes:&r"
+				"&a- Wild:&r Bears, Wolves."
+				"&7- Undead:&r Skeletons, Zombies (Burn in sunlight unless wearing helmets)."
+				"&c- Nether:&r Blazes, Wither Skeletons."
+				""
+				"Try crafting a &cMauling Focus&r or performing the &dAnimation Ritual&r to summon a Bear."
+				""
+				"&oCheck The Black Book under \"Summons\" for specific rituals.&r"
+			]
+			icon: "goety:mauling_focus"
+			id: "64A0BE039E32BB82"
+			rewards: [{
+				count: 5
+				id: "046E72118CC6A796"
+				item: "minecraft:salmon"
+				type: "item"
+			}]
+			tasks: [{
+				id: "428400A1D66F62FA"
+				item: "goety:mauling_focus"
+				type: "item"
+			}]
+			title: "Summoning Servants"
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000000000008"]
+			description: [
+				"Wearing specific Robes and Crowns buffs your specific servant types."
+				""
+				"&6Crowns:&r Allow specific servant types (Wild, Undead, Frost) to persist forever and halves spell cast time."
+				""
+				"&5Robes:&r Reduce soul cost (Dark Robe), halve incoming damage while casting (Grand Robe), or buff specific elements."
+			]
+			icon: {
+				Count: 1
+				id: "goety:warlock_robe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "559B963F9BC3FDE7"
+			tasks: [
+				{
+					id: "0B168E516C3978EA"
+					item: {
+						Count: 1
+						id: "goety:warlock_robe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "566D6671B49FB30A"
+					item: {
+						Count: 1
+						id: "goety:wild_crown"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Equipment of the Master"
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000000000006"]
+			description: [
+				"Goety Brewing allows for multi-effect potions."
+				""
+				"&lSetup:&r"
+				"1. Place &8Witch's Cauldron&r over a heat source (Fire/Campfire)."
+				"2. Place water inside."
+				"3. Nearby, place &8Cursed Cages&r topped with &bSoul Candlesticks&r. These supply Soul Energy wirelessly to the cauldron."
+				""
+				"&lThe Steps:&r"
+				"1. &6Capacity:&r Throw in Nether Wart (Base 4 capacity). Add Snap Warts or Ruby of Souls to increase this."
+				"2. &aCatalyst:&r Throw in ingredients (e.g., Golden Apple for Absorption). Check the Witch's Brews book."
+				"3. &eAugmentation:&r Add Glowstone (Power) or Redstone (Duration)."
+				"4. &dFinish:&r Right-click with a &8Cauldron Ladle&r, then use Glass Bottles."
+			]
+			icon: "goety:witches_cauldron"
+			id: "701DFFA7E9F4EA6C"
+			tasks: [
+				{
+					id: "4381345F681D94A4"
+					item: "goety:witches_cauldron"
+					type: "item"
+				}
+				{
+					id: "55E03111BE85FC82"
+					item: "goety:soul_candlestick"
+					type: "item"
+				}
+				{
+					id: "1BE4A18D7760C453"
+					item: "goety:cauldron_ladle"
+					type: "item"
+				}
+				{
+					id: "7B546544BA8E58F5"
+					item: "goety:snap_fungus"
+					type: "item"
+				}
+			]
+			title: "Witch's Brewing"
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000000000007"]
+			description: [
+				"Carrying Totems is tedious. The &5Arca&r stores 100,000 Soul Energy and powers all your magical devices wirelessly."
+				""
+				"1. Craft the &5Arca&r (Requires the Forge Ritual)."
+				"2. Place it down (You only need one)."
+				"3. Craft a &bTransfer Gem&r and Right-Click the Arca to bind it."
+				"4. Place the Transfer Gem into any &8Cursed Cage&r. That Cage now draws power from the Arca!"
+				""
+				"&lFilling the Arca:&r"
+				"Place a &5Soul Absorber&r on top of the Arca. You can right-click Totems onto it to dump their energy, or place a Hopper pointing into the Absorber filled with &6Soul Sand&r or &eTotems of Undying&r."
+				""
+				"&o1 Totem of Undying = 200 Soul Energy.&r"
+			]
+			icon: "goety:arca"
+			id: "652556284E0F5664"
+			rewards: [{
+				id: "40AECF0379C1E771"
+				item: "minecraft:totem_of_undying"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "4DD932B8B771A8F8"
+					item: "goety:arca"
+					type: "item"
+				}
+				{
+					id: "3B98D5F68527A9F0"
+					item: "goety:soul_absorber"
+					type: "item"
+				}
+				{
+					id: "5089EB8DCE1A393C"
+					item: {
+						Count: 1b
+						id: "goety:transfer_gem"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "The Arca: Infinite Soul Network"
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000000000000B"]
+			description: [
+				"Now that you have an Arca, let's automate."
+				""
+				"&a- Sculk Devourer:&r Place this near a mob farm. When mobs die nearby, it converts their XP directly into Soul Energy for your Arca."
+				"&b- Soul Mender:&r Place items inside to repair them using Soul Energy."
+				"&e- Sculk Grower:&r Place a Cursed Cage (with Transfer Gem) on top. It speeds up crop growth."
+			]
+			icon: "goety:sculk_devourer"
+			id: "54320E7400F6055F"
+			tasks: [
+				{
+					id: "3367883E40902D67"
+					item: "goety:sculk_devourer"
+					type: "item"
+				}
+				{
+					id: "1CD89EAD179C7CEC"
+					item: "goety:soul_mender"
+					type: "item"
+				}
+			]
+			title: "Dark Artifices & Farms"
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["000000000000000B"]
+			description: [
+				"To get the best gear, you must venture to the &3Deep Dark&r."
+				""
+				"Place a &8Necrotic Brazier&r in the Deep Dark biome. It uses Soul Energy (via Transfer Gem/Cage nearby or manual feed) to craft &8Dark Metal Ingots&r."
+				""
+				"Use Dark Metal to craft high-tier tools like the &5Scythe&r (AOE damage) or &5Eerie Pickaxe&r (Increased reach)."
+			]
+			icon: "goety:necrotic_brazier"
+			id: "0D19D1C17908FE20"
+			tasks: [
+				{
+					id: "46057A2AF20CBE91"
+					item: "goety:necrotic_brazier"
+					type: "item"
+				}
+				{
+					id: "2F0C62117ABAC110"
+					item: "goety:dark_metal_ingot"
+					type: "item"
+				}
+				{
+					id: "53B335C9714D17B5"
+					item: {
+						Count: 1
+						id: "goety:death_scythe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "The Necrotic Brazier & Dark Metal"
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["0000000000000007"]
+			description: [
+				"Prepare for a fight."
+				"Perform the &cSabbath Ritual&r to summon the &4Apostle&r."
+				""
+				"- It has multiple phases and hits hard."
+				"- &cIMPORTANT:&r If killed in the Nether, it drops better loot, including Ancient Debris and the Night Beacon."
+				"- It always drops &4Unholy Blood&r."
+			]
+			icon: "goety:unholy_blood"
+			id: "2462CE6773CB9CA6"
+			rewards: [{
+				count: 2
+				id: "3195A7BE29E97447"
+				item: "minecraft:netherite_scrap"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7B278CFFB1ACD0CA"
+				item: "goety:unholy_blood"
+				type: "item"
+			}]
+			title: "The Apostle"
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["000000000000000E"]
+			description: [
+				"The ultimate transcendence."
+				""
+				"1. Find a &5Forbidden Scroll&r fragment (Dungeons, or rare drop from Apostle/Illagers)."
+				"2. Craft the full Scroll and read it."
+				"3. Perform the &5Necroturgy Ritual&r to craft the &dPotion of Transformation&r."
+				"4. &lDrink it under a Full Moon.&r"
+				""
+				"&5Lich Perks:&r"
+				"- No Hunger (but can eat)."
+				"- Night Vision."
+				"- Immune to Drowning."
+				"- Heal using Soul Energy."
+				"- &cWarning: This is permanent.&r"
+			]
+			icon: "goety:forbidden_scroll"
+			id: "0E9A31FF12FD6445"
+			rewards: [{
+				id: "317CA4869BD041A2"
+				item: {
+					Count: 1
+					id: "goety:nameless_crown"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "32A0DFD25B21DDF3"
+					item: "goety:forbidden_scroll"
+					type: "item"
+				}
+				{
+					id: "447FEBD766255D96"
+					item: "goety:transformation_brew"
+					type: "item"
+				}
+			]
+			title: "Lichdom"
+			x: 4.0d
+			y: 12.0d
+		}
+	]
+	title: "Goety - The Dark Arts"
+}
