@@ -133,8 +133,5 @@ levelingData:
     step: 100
 lootData:
     # List of key-value pairs where the key is a textual identifier for the loot table (supporting regular expressions) and the value represents the probability of generating the relic within the specified bounds
-    entries:
-        minecraft:chests/ancient_city: 0.01
-        '[\w]+:chests\/[\w_\/]*(end|warp)[\w_\/]*': 0.01
-        minecraft:chests/ancient_city_ice_box: 0.01
-        '[\w]+:chests\/[\w_\/]*(warden|sculk|echo)[\w_\/]*': 0.01
+    entries: {
+        }

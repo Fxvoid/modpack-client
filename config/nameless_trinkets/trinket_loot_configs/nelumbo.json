@@ -1,14 +1,5 @@
 {
   "item": "nelumbo",
-  "chance": 0.005,
-  "loot_tables": [
-    {
-      "f_135804_": "lootintegrations",
-      "f_135805_": "chests/easy"
-    },
-    {
-      "f_135804_": "lootintegrations",
-      "f_135805_": "chests/village"
-    }
-  ]
+  "chance": 0.0,
+  "loot_tables": []
 }

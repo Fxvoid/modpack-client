@@ -35,5 +35,5 @@ levelingData:
     step: 20
 lootData:
     # List of key-value pairs where the key is a textual identifier for the loot table (supporting regular expressions) and the value represents the probability of generating the relic within the specified bounds
-    entries:
-        lootintegrations:chests/medium: 0.001
+    entries: {
+        }

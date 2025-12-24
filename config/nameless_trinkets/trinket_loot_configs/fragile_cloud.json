@@ -1,14 +1,5 @@
 {
   "item": "fragile_cloud",
-  "chance": 0.0015,
-  "loot_tables": [
-    {
-      "f_135804_": "lootintegrations",
-      "f_135805_": "chests/medium"
-    },
-    {
-      "f_135804_": "lootintegrations",
-      "f_135805_": "chests/village"
-    }
-  ]
+  "chance": 0.0,
+  "loot_tables": []
 }
