@@ -71,14 +71,6 @@ echo  [INFO] Syncing files (This will overwrite mods/configs to match the server
 :: Because of your .gitignore, it won't touch saves, screenshots, or options.txt.
 git reset --hard origin/%BRANCH%
 
-echo.
-echo  [INFO] Cleaning up obsolete files...
-:: 4. Remove tracked files that were deleted in the repo
-:: Note: This does NOT delete user-added un-tracked files (like screenshots)
-:: to prevent accidents. If you want to force-delete user added mods
-:: that you didn't approve, you would need "git clean -fd", but that is dangerous.
-git clean -fX
-
 :: ==========================================
 :: LARGE FILE DOWNLOADER
 :: ==========================================
