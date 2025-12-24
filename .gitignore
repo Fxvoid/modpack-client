@@ -21,6 +21,7 @@
 # but Git's more specific ignore pattern for these exact files should now take precedence.
 /config/distraction_free_recipes-client.toml
 /config/fabric/
+/config/jade/
 /config/oculus.properties
 /config/packetfixer.properties
 /config/compasscoords-client.toml
