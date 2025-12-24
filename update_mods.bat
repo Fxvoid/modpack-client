@@ -83,7 +83,7 @@ if not exist "mods\%BIG_MOD_NAME%" (
 )
 
 :: ==========================================
-:: SERVER-SIDE CLEANUP LOGIC
+:: SERVER-SIDE CLEANUP LOGIC (Fixed)
 :: ==========================================
 :CheckServerMode
 if /I NOT "%PACK_MODE%"=="SERVER" goto :Success
@@ -99,21 +99,9 @@ if not exist "%BLOCKLIST_FILE%" (
     goto :Success
 )
 
-:: Iterate through the text file and delete found files
-set /a deleted_count=0
-for /F "usebackq tokens=*" %%A in ("%BLOCKLIST_FILE%") do (
-    :: Trim whitespace logic handles via tokens=*
-    if not "%%A"=="" (
-        if exist "mods\%%A" (
-            echo   - Deleting: %%A
-            del /F /Q "mods\%%A"
-            set /a deleted_count+=1
-        )
-    )
-)
-
+:: We use PowerShell to read the list and delete files because Batch fails with text encodings.
 echo.
-echo   [INFO] Cleanup Complete. Removed !deleted_count! client-side files.
+powershell -Command "$list = Get-Content '%BLOCKLIST_FILE%'; $count = 0; foreach ($file in $list) { if (-not [string]::IsNullOrWhiteSpace($file)) { $path = Join-Path 'mods' $file; if (Test-Path $path) { Remove-Item -Path $path -Force; Write-Host \"   - Deleting: $file\"; $count++ } } }; Write-Host \"`n   [INFO] Cleanup Complete. Removed $count files.\""
 
 :Success
 echo.
