@@ -2,24 +2,28 @@
 *
 !.gitignore
 
-# 2. Allow specific folders (and their contents recursively)
+# 2. Allow specific *essential* top-level folders to be tracked
 !/config/
-!/config/**
-
 !/defaultconfigs/
-!/defaultconfigs/**
-
 !/kubejs/
-!/kubejs/**
-
-# 3. Handle the 'mods' folder separately
-# Allow the folder itself to be seen
 !/mods/
 
-# Allow .jar files inside the mods folder
-!/mods/*.jar
+# 3. Allow *all contents* recursively within those essential folders
+!/config/**
+!/defaultconfigs/**
+!/kubejs/**
 
-!update_mods.bat
+# Handle the 'mods' folder separately: only track .jar files, ignore all else at root of /mods
+!/mods/*.jar 
 
-#Ignore cataclysm cause it's too fat for github
+# 4. Now, EXPLICITLY RE-IGNORE the specific client-side user configs
+# These files are *within* /config/, which was previously unignored by !/config/**,
+# but Git's more specific ignore pattern for these exact files should now take precedence.
+/config/distraction_free_recipes-client.toml
+/config/fabric/
+/config/oculus.properties
+/config/packetfixer.properties
+/config/compasscoords-client.toml
+
+# Also explicitly ignore this large mod file
 /mods/L_Enders_Cataclysm-3.16.jar
