@@ -8,8 +8,14 @@ COLOR 0A
 :: ==========================================
 
 SET "REPO_URL=https://github.com/Fxvoid/modpack-client"
-
 SET "BRANCH=main"
+SET "BLOCKLIST_FILE=Client_Side_Only_Mods.txt"
+
+:: Set this to SERVER manually here, OR set it via environment variable,
+:: OR pass --server when running the script.
+:: Default is CLIENT
+if "%PACK_MODE%"=="" SET "PACK_MODE=CLIENT"
+if /I "%1"=="--server" SET "PACK_MODE=SERVER"
 
 :: ==========================================
 :: SCRIPT START
@@ -18,10 +24,11 @@ SET "BRANCH=main"
 echo.
 echo  ========================================
 echo   MINECRAFT REPO SYNC
+echo   Mode: %PACK_MODE%
 echo  ========================================
 echo.
 
-:: 1. Check if Git is installed on their computer
+:: 1. Check if Git is installed
 git --version >nul 2>&1
 if %errorlevel% neq 0 (
     COLOR 0C
@@ -29,24 +36,15 @@ if %errorlevel% neq 0 (
     echo.
     echo  Please download and install Git for Windows:
     echo  https://git-scm.com/download/win
-    echo.
-    echo  During installation, just click Next, Next, Next...
     pause
     exit /b
 )
 
-:: 2. Check if this folder is already initialized
+:: 2. Check/Init Repo
 if not exist ".git" (
     echo  [INFO] First run detected. Initializing...
-    echo.
-    
-    :: Initialize git
     git init
-    
-    :: Add the remote URL
     git remote add origin %REPO_URL%
-    
-    :: Configure git to not handle line ending conversions automatically (prevents corruption)
     git config core.autocrlf false
 ) 
 
@@ -56,19 +54,15 @@ git fetch origin
 if %errorlevel% neq 0 (
     COLOR 0C
     echo.
-    echo  [ERROR] Could not connect to GitHub. 
-    echo  - Check your internet connection.
-    echo  - Check if the REPO_URL in this script is correct.
+    echo  [ERROR] Could not connect to GitHub.
     pause
     exit /b
 )
 
 echo.
-echo  [INFO] Syncing files (This will overwrite mods/configs to match the server)...
+echo  [INFO] Syncing files...
 
-:: 3. The Nuclear Option: Reset Hard
-:: This makes the local folder EXACTLY match the remote repo for tracked files.
-:: Because of your .gitignore, it won't touch saves, screenshots, or options.txt.
+:: 3. The Reset (Restores ALL tracked files, including client mods)
 git reset --hard origin/%BRANCH%
 
 :: ==========================================
@@ -77,26 +71,51 @@ git reset --hard origin/%BRANCH%
 echo.
 echo  [INFO] Checking for large mods not in Git...
 
-:: Set the specific filename and the download URL (FIXME: URL MAY NOT WORK NEEDS TESTING)
 SET "BIG_MOD_NAME=L_Enders_Cataclysm-3.16.jar"
+:: Note: Direct download links from CF usually require the Edge/CDN URL, simple web links might return HTML.
 SET "BIG_MOD_URL=https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/download/6906993"
 
 if not exist "mods\%BIG_MOD_NAME%" (
     echo   - Downloading %BIG_MOD_NAME%...
-    
-    :: Uses PowerShell to download the file because it's reliable on all Windows
     powershell -Command "Invoke-WebRequest -Uri '%BIG_MOD_URL%' -OutFile 'mods\%BIG_MOD_NAME%'"
-    
-    if exist "mods\%BIG_MOD_NAME%" (
-        echo   - Download Complete.
-    ) else (
-        COLOR 0C
-        echo   [ERROR] Failed to download large mod.
-    )
 ) else (
     echo   - Large mod already exists. Skipping.
 )
 
+:: ==========================================
+:: SERVER-SIDE CLEANUP LOGIC
+:: ==========================================
+:CheckServerMode
+if /I NOT "%PACK_MODE%"=="SERVER" goto :Success
+
+echo.
+echo  [INFO] Server Environment Detected.
+echo         Scanning for Client-Side mods to remove...
+
+if not exist "%BLOCKLIST_FILE%" (
+    COLOR 0E
+    echo   [WARN] %BLOCKLIST_FILE% not found! 
+    echo          Cannot clean client mods. Skipping...
+    goto :Success
+)
+
+:: Iterate through the text file and delete found files
+set /a deleted_count=0
+for /F "usebackq tokens=*" %%A in ("%BLOCKLIST_FILE%") do (
+    :: Trim whitespace logic handles via tokens=*
+    if not "%%A"=="" (
+        if exist "mods\%%A" (
+            echo   - Deleting: %%A
+            del /F /Q "mods\%%A"
+            set /a deleted_count+=1
+        )
+    )
+)
+
+echo.
+echo   [INFO] Cleanup Complete. Removed !deleted_count! client-side files.
+
+:Success
 echo.
 echo  ========================================
 echo   SUCCESS! Your pack is up to date.

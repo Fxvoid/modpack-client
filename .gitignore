@@ -2,6 +2,8 @@
 *
 !.gitignore
 
+!
+
 # 2. Allow specific *essential* top-level folders to be tracked
 !/config/
 !/defaultconfigs/
@@ -28,3 +30,7 @@
 
 # Also explicitly ignore this large mod file
 /mods/L_Enders_Cataclysm-3.16.jar
+
+!update_mods.bat
+!update_server.bat
+!Client_Side_Only_Mods.txt
