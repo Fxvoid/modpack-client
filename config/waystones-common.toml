@@ -88,17 +88,17 @@
 	#The base xp level cost when travelling between dimensions. Ignores block distance.
 	dimensionalWarpXpCost = 3
 	#The multiplier applied to the base xp cost when teleporting to a global waystone through any method.
-	globalWaystoneXpCostMultiplier = 0.0
+	globalWaystoneXpCostMultiplier = 1.0
 	#The multiplier applied to the base xp cost when teleporting using a Warp Stone item (not the Waystone block, Konstantin)
 	warpStoneXpCostMultiplier = 0.0
 	#The multiplier applied to the base xp cost when teleporting from one waystone to another.
-	waystoneXpCostMultiplier = 0.0
+	waystoneXpCostMultiplier = 1.0
 	#The multiplier applied to the base xp cost when teleporting from one sharestone to another.
-	sharestoneXpCostMultiplier = 0.0
+	sharestoneXpCostMultiplier = 1.0
 	#The multiplier applied to the base xp cost when teleporting from a portstone.
-	portstoneXpCostMultiplier = 0.0
+	portstoneXpCostMultiplier = 1.0
 	#The multiplier applied to the base xp cost when teleporting from one warp plate to another.
-	warpPlateXpCostMultiplier = 0.0
+	warpPlateXpCostMultiplier = 1.0
 	#The multiplier applied to the base xp cost when teleporting via the inventory button.
 	inventoryButtonXpCostMultiplier = 0.0
 
