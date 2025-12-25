@@ -35,7 +35,7 @@
 		# If enabled, information like position and direction will be hidden from the debug screen (F3).
 		"Hide Info From Debug" = true
 		# If enabled, the player can regenerate health naturally if their hunger is full enough (doesn't affect external healing, such as golden apples, the Regeneration effect, etc.)
-		"Natural Regeneration Enabled" = true
+		"Natural Regeneration Enabled" = false
 		# If enabled, the player suffers vanilla freeze when inside powder snow.
 		"Vanilla Freeze Enabled" = false
 		# How much health player will have initially.
@@ -107,7 +107,7 @@
 		# Enable the wetness mechanic.
 		"Wetness Enabled" = true
 		# List of mounts that provide a wetness immunity.
-		"Wetness Immunity Mounts" = ["alexscaves:submarine", "immersive_machinery:bamboo_bee", "immersive_machinery:tunnel_digger", "immersive_machinery:redstone_sheep", "immersive_machinery:copperfin"]
+		"Wetness Immunity Mounts" = ["alexscaves:submarine"]
 		# How much being wet influences the player's temperature.
 		# It means that for a value of -10, the body temperature of the player is reduced by 10.
 		#Range: -1000.0 ~ 1000.0
