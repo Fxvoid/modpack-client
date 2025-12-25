@@ -45,7 +45,7 @@
         "hideParticles": true
       }
     ],
-    "reviveItem": "{id:\"item\",item:\"firstaid:bandage\"}",
+    "reviveItem": "{id:\"item\",item:\"legendarysurvivaloverhaul:bandage\"}",
     "needReviveItem": true,
     "consumeReviveItem": true,
     "maxDistance": 3,
