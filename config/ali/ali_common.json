@@ -73,7 +73,7 @@
       "icon": "minecraft:compass",
       "hide": false,
       "pattern": [
-        ".*"
+        "^(?!sonsofsins:).*$"
       ]
     }
   ],
@@ -84,18 +84,10 @@
       "icon": "minecraft:emerald_block",
       "hide": false,
       "pattern": [
-        ".*"
+        "^(?!sonsofsins:).*$"
       ]
     }
   ],
-  "disabledEntities": [
-    "sonsofsins:strife",
-    "sonsofsins:butcher",
-    "sonsofsins:prowler",
-    "sonsofsins:curse",
-    "sonsofsins:bloody_driver",
-    "sonsofsins:walking_bed",
-    "sonsofsins:withered_abbot"
-  ],
+  "disabledEntities": [],
   "logMoreStatistics": false
 }
