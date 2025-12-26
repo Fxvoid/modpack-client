@@ -88,6 +88,14 @@
       ]
     }
   ],
-  "disabledEntities": [],
+  "disabledEntities": [
+    "sonsofsins:strife",
+    "sonsofsins:butcher",
+    "sonsofsins:prowler",
+    "sonsofsins:curse",
+    "sonsofsins:bloody_driver",
+    "sonsofsins:walking_bed",
+    "sonsofsins:withered_abbot"
+  ],
   "logMoreStatistics": false
 }
