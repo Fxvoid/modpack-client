@@ -25,6 +25,8 @@
 /config/fabric/
 /config/jade/
 /config/jei/
+/config/blockswap/known_states/
+/config/blockswap/missing_block_ids.json5
 /config/oculus.properties
 /config/packetfixer.properties
 /config/compasscoords-client.toml
