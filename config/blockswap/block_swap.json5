@@ -93,5 +93,6 @@ to make editing this file much easier.
     "werewolves:deepslate_silver_ore": "minecraft:deepslate",
     "galosphere:silver_ore": "minecraft:stone",
     "galosphere:deepslate_silver_ore": "minecraft:deepslate",
+    "terramity:sapphire_ore": "iceandfire:sapphire_ore",
   },
 }
