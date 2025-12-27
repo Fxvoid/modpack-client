@@ -94,5 +94,7 @@ to make editing this file much easier.
     "galosphere:silver_ore": "minecraft:stone",
     "galosphere:deepslate_silver_ore": "minecraft:deepslate",
     "terramity:sapphire_ore": "iceandfire:sapphire_ore",
+    "butchery:sulfur_ore": "minecraft:stone",
+    "butchery:deepslate_sulfur_ore": "minecraft:deepslate",
   },
 }
